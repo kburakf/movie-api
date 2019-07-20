@@ -1,5 +1,5 @@
 # movie-api
-by Kürşat Burak Farız
+by Kürşat Burak FARIZ
 NodeJS Movie API
 
 Movies
