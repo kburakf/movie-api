@@ -1,9 +1,11 @@
 const movieRouter = require("./movie")
-const indexRouter = require("./index")
+const registerRouter = require("./register")
 const directorRouter = require("./director")
+const verifyToken = require("../middleware/verify-token")
 
 module.exports = app => {
+    app.use("/api",verifyToken)
     app.use("/api/movies", movieRouter)
-    app.use("/index", indexRouter)
+    app.use("/", registerRouter)
     app.use("/api/directors", directorRouter)
 }
