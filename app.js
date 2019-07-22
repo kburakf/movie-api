@@ -5,14 +5,20 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require("body-parser")
 
+// ROUTERS 
+
 const indexRouter = require('./routes/index');
 const movieRouter = require('./routes/movie');
+const directorRouter = require('./routes/director');
 
 const app = express();
+
+//DATABASE
 
 const db = require("./helper/db")()
 
 // view engine setup
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
